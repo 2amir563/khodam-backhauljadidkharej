@@ -1,0 +1,15 @@
+[Unit]
+Description=Backhaul Service
+After=network.target
+
+[Service]
+Type=simple
+# In khat masire ejraye barname va config ro moshakhas mikone
+ExecStart=/root/backhaul -c /root/conf.toml
+WorkingDirectory=/root
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
