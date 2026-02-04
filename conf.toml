@@ -1,0 +1,28 @@
+[client]
+remote_addr = "SUBDOMAIN_SHOMA:2087"
+transport = "quic"
+token = "mehdi"
+web_port = 2526
+connection_pool = 8
+aggressive_pool = true
+log_level = "info"
+
+[[client.ports]]
+address = "127.0.0.1:2096"
+target = "127.0.0.1:2096"
+type = "udp"
+
+[[client.ports]]
+address = "127.0.0.1:50961"
+target = "127.0.0.1:50961"
+type = "udp"
+
+[[client.ports]]
+address = "127.0.0.1:2083"
+target = "127.0.0.1:2083"
+type = "tcp"
+
+[[client.ports]]
+address = "127.0.0.1:40960"
+target = "127.0.0.1:40960"
+type = "tcp"
